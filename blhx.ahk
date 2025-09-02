@@ -1,12 +1,7 @@
-; AHK script to open blhx and alas shortcuts
+; blhx.ahk
+#NoEnv
+SetWorkingDir, %A_ScriptDir%   ; script's folder = root
 
-; Adjust this to the actual path of your "shortcuts" folder
-shortcutsFolder := "C:\path\to\shortcuts"
-
-; Full paths to the shortcuts
-blhx := shortcutsFolder . "\blhx.lnk"
-alas := shortcutsFolder . "\alas.lnk"
-
-; Open both
-Run, %blhx%
-Run, %alas%
+Run, %A_ScriptDir%\shortcuts\blhx.lnk
+Run, %A_ScriptDir%\shortcuts\alas.lnk
+ExitApp
